@@ -44,7 +44,7 @@ This latest sample application relies on the new Android library *Custom Vision 
 - __Subtract mean values__: Check if the exported model has a normalization layer, and if not subtract the RGB mean values from their respective pixel RGB components of the input image before passing to TensorFlow inference engine.
 - __Resize and crop input image__: Resize the image such that the longest dimension is 1600 pixels in length then take a center crop after which the image is resized to dimensions is then resized to dimensions that the model network is expecting.
 
-- __Version check__: Check the version of the exported model by looking at `cvexport.manifest` (more specifically, look for *ExporterVersion* field) and switch logic depending on model version.
+- __Version check__: Check the version of the exported model by looking at `manifest` (more specifically, look for *ExporterVersion* field) and switch logic depending on model version.
 
     - __Forward compatibility__: It is when model version is newer than run-time's maximum supported model version.
     
